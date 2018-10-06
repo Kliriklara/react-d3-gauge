@@ -18,7 +18,7 @@ const getHalfCircleMeasurements = (size=100, lineWidth=5) => {
   };
 };
 
-export default class Gauge extends React.Component {
+export default class HalfCircleComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
