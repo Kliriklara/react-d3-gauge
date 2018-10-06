@@ -28,6 +28,8 @@ export default class HalfCircleComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      range: props.range,
+      unit: props.unit,
       size: props.size,
       lineWidth: props.lineWidth,
       transform: props.transform,
@@ -44,8 +46,8 @@ export default class HalfCircleComponent extends React.Component {
       </clipPath>
       <circle style={this.state.circleStyle} transform={this.state.transform} r={this.state.circleMeasurements.circleRadius} cx={this.state.circleMeasurements.circleX} cy={this.state.circleMeasurements.circleY} clipPath="url(#cut-off-bottom)" />
       <g style={axisFontStyle}>
-        <text transform={`translate(${this.state.lineWidth}, 310)`}>0</text>
-        <text transform={`translate(${this.state.size + this.state.lineWidth}, 310)`}>200</text>
+        <text transform={`translate(${this.state.lineWidth}, 310)`}>{this.state.unit} {this.state.range[0]}</text>
+        <text transform={`translate(${this.state.size + this.state.lineWidth}, 310)`}>{this.state.unit} {this.state.range[1]}</text>
       </g>
     </g>
     );
