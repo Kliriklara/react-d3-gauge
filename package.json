@@ -4,6 +4,8 @@
   "description": "A Gauge Visualisation built with Webpack and React",
   "main": "src/app.js",
   "scripts": {
+    "build": "webpack --config webpack.config.js --mode production",
+    "serve": "webpack-dev-server --config webpack.config.js --mode development",
     "test": "test"
   },
   "repository": {
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/ckanz/react-d3-gauge/issues"
   },
-  "homepage": "https://github.com/ckanz/react-d3-gauge#readme"
+  "homepage": "https://github.com/ckanz/react-d3-gauge#readme",
+  "devDependencies": {
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
 }
