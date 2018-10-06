@@ -7,12 +7,15 @@ import HalfCircleComponent from '../src/components/halfCircle.component';
 import { shallow } from './enzyme';
 
 describe('<HalfCircleComponent />', () => {
-
-  it('imports HalfCircle component', () => {
-    expect(HalfCircleComponent).toBeTruthy();
-  });
   it('mounts HalfCircle component successfully', () => {
-    const wrapper = shallow(<HalfCircleComponent transform="translate(0, 75)" unit="GBP" range={[0, 200]} size={400} lineWidth={20} color="grey" />);
+    const wrapper = shallow(
+      <HalfCircleComponent
+      transform="translate(0, 75)"
+      unit="GBP"
+      range={[0, 200]}
+      size={400}
+      lineWidth={20}
+      color="grey" />);
     expect(wrapper.find('.circle-component').length).toBe(1);
     expect(wrapper.find('text').length).toBe(2);
     expect(wrapper.find('circle').length).toBe(1);
