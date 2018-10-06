@@ -17,7 +17,7 @@ export default class Gauge extends React.Component {
   render() {
     return (
       <svg style={gaugeStyle} className="gauge">
-        <HalfCircleComponent />
+        <HalfCircleComponent size={200} lineWidth={20} color="grey" />
       </svg>
     );
   }
