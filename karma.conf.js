@@ -1,8 +1,8 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
 
-module.exports = function (config) {
+module.exports = config => {
   config.set({
-    browsers: [ 'PhantomJS' ],
+    browsers: ['PhantomJS'],
     singleRun: true,
     frameworks: ['jasmine'],
     files: [
