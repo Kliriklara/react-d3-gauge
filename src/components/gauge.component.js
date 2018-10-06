@@ -12,7 +12,6 @@ const gaugeStyle = {
   height
 };
 
-
 export default class Gauge extends React.Component {
   constructor(props) {
     super(props);
@@ -25,7 +24,12 @@ export default class Gauge extends React.Component {
     return (
       <svg style={gaugeStyle} className="gauge">
         <MainMetricComponent xPos={width / 2 + lineWidth} data={this.state.data} />
-        <HalfCircleComponent transform="translate(0, 75)" unit={this.state.data.unit} range={valueRange} size={width} lineWidth={lineWidth} color="grey" />
+        <HalfCircleComponent
+          transform="translate(0, 75)"
+          unit={this.state.data.unit}
+          range={valueRange} size={width}
+          lineWidth={lineWidth}
+          color="grey" />
       </svg>
     );
   }
