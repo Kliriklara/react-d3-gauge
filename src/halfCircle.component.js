@@ -3,12 +3,12 @@ import React from 'react';
 const getHalfCircleStyle = props => {
   return {
     fill: 'none',
-    stroke: props.color,
-    strokeWidth: props.lineWidth
+    stroke: props.color || 'black',
+    strokeWidth: props.lineWidth || 5
   }
 };
 
-const getHalfCircleMeasurements = (size, lineWidth) => {
+const getHalfCircleMeasurements = (size=100, lineWidth=5) => {
   return {
     cutoffWidth: size * 2 + lineWidth * 2,
     cutoffHeight: size + lineWidth,
@@ -38,4 +38,9 @@ export default class Gauge extends React.Component {
     </g>
     );
   }
+}
+
+export {
+  getHalfCircleStyle,
+  getHalfCircleMeasurements
 }
