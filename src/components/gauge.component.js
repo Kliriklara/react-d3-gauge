@@ -1,6 +1,6 @@
 import React from 'react';
-import HalfCircleComponent from './components/halfCircle.component';
-import MainMetricComponent from './components/mainMetric.component';
+import HalfCircleComponent from './halfCircle.component';
+import MainMetricComponent from './mainMetric.component';
 
 const width = 400;
 const height = 500;
