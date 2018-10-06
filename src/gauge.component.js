@@ -1,4 +1,10 @@
 import React from 'react';
+import HalfCircleComponent from './halfCircle.component';
+
+const gaugeStyle = {
+  width: '100%',
+  height: 500
+};
 
 export default class Gauge extends React.Component {
   constructor(props) {
@@ -10,9 +16,9 @@ export default class Gauge extends React.Component {
 
   render() {
     return (
-      <div className="gauge">
-      <p>{JSON.stringify(this.state.data)}</p>
-      </div>
+      <svg style={gaugeStyle} className="gauge">
+        <HalfCircleComponent />
+      </svg>
     );
   }
 }
