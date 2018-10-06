@@ -2,8 +2,8 @@ import React from 'react';
 import {
   getHalfCircleStyle,
   getHalfCircleMeasurements
-} from '../src/halfCircle.component';
-import HalfCircleComponent from '../src/halfCircle.component';
+} from '../src/components/halfCircle.component';
+import HalfCircleComponent from '../src/components/halfCircle.component';
 
 describe('<HalfCircleComponent />', () => {
 
@@ -33,7 +33,7 @@ describe('<HalfCircleComponent />', () => {
     });
   });
   describe('getHalfCircleMeasurements', () => {
-    it('returns returns expected mea§surements with given props', () => {
+    it('returns returns expected measurements with given props', () => {
       const measurementsResult = getHalfCircleMeasurements(400, 20);
       expect(measurementsResult).toEqual({
         cutoffWidth: 440,
