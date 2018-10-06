@@ -1,5 +1,6 @@
 import React from 'react';
 import HalfCircleComponent from './halfCircle.component';
+import MainMetricComponent from './mainMetric.component';
 
 const gaugeStyle = {
   width: '100%',
@@ -17,7 +18,8 @@ export default class Gauge extends React.Component {
   render() {
     return (
       <svg style={gaugeStyle} className="gauge">
-        <HalfCircleComponent size={200} lineWidth={20} color="grey" />
+        <MainMetricComponent value={this.props.data.value} />
+        <HalfCircleComponent transform="translate(0, 100)" size={200} lineWidth={20} color="grey" />
       </svg>
     );
   }
