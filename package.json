@@ -1,0 +1,19 @@
+{
+  "name": "react-d3-gauge",
+  "version": "0.1.0",
+  "description": "A Gauge Visualisation built with Webpack and React",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckanz/react-d3-gauge.git"
+  },
+  "author": "Clemens Anzmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckanz/react-d3-gauge/issues"
+  },
+  "homepage": "https://github.com/ckanz/react-d3-gauge#readme"
+}
