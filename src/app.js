@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Gauge from './gauge.component';
+
 const data = require('./data.json');
 
 const Index = () => {
-  return <div>{data.value}</div>;
+  return (
+    <div>
+      <Gauge data={data} />
+    </div>
+  );
 };
 
 ReactDOM.render(<Index />, document.getElementById('main'));
