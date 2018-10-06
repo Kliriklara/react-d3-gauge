@@ -8,13 +8,13 @@ const getHalfCircleStyle = props => {
   }
 };
 
-const getHalfCircleMeasurements = (size=100, lineWidth=5) => {
+const getHalfCircleMeasurements = (size=200, lineWidth=5) => {
   return {
-    cutoffWidth: size * 2 + lineWidth * 2,
-    cutoffHeight: size + lineWidth,
-    circleX: size + lineWidth,
-    circleY: size + lineWidth,
-    circleRadius: size
+    cutoffWidth: size + lineWidth * 2,
+    cutoffHeight: size / 2 + lineWidth,
+    circleX: size/ 2 + lineWidth,
+    circleY: size / 2 + lineWidth,
+    circleRadius: size / 2
   };
 };
 

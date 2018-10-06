@@ -34,7 +34,7 @@ describe('<HalfCircleComponent />', () => {
   });
   describe('getHalfCircleMeasurements', () => {
     it('returns returns expected mea§surements with given props', () => {
-      const measurementsResult = getHalfCircleMeasurements(200, 20);
+      const measurementsResult = getHalfCircleMeasurements(400, 20);
       expect(measurementsResult).toEqual({
         cutoffWidth: 440,
         cutoffHeight: 220,

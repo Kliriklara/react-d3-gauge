@@ -2,6 +2,7 @@ import React from 'react';
 
 const mainMetricStyle = {
   fontSize: 50,
+  fontFamily: 'Arial',
   textAnchor: 'middle'
 }
 
@@ -9,15 +10,16 @@ export default class MainMetricComponent  extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: props.width,
-      value: props.value
+      xPos: props.xPos,
+      value: props.data.value,
+      unit: props.data.unit
     };
   }
 
   render() {
     return (
-    <g transform="translate(210, 50)" style={mainMetricStyle} className="main-metric-component">
-      <text>{this.state.value}</text>
+    <g transform={`translate(${this.props.xPos}, 50)`} style={mainMetricStyle} className="main-metric-component">
+      <text>{this.state.unit} {this.state.value}</text>
     </g>
     );
   }
