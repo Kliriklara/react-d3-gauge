@@ -1,5 +1,11 @@
 import React from 'react';
 
+const axisFontStyle = {
+  fontFamily: 'Arial',
+  textAnchor: 'middle',
+  fontSize: 12
+};
+
 const getHalfCircleStyle = props => {
   return {
     fill: 'none',
@@ -23,19 +29,24 @@ export default class HalfCircleComponent extends React.Component {
     super(props);
     this.state = {
       size: props.size,
+      lineWidth: props.lineWidth,
       transform: props.transform,
-      style: getHalfCircleStyle(props),
+      circleStyle: getHalfCircleStyle(props),
       circleMeasurements: getHalfCircleMeasurements(props.size, props.lineWidth)
     };
   }
 
   render() {
     return (
-    <g style={this.state.style} className="circle-component">
+    <g className="circle-component">
       <clipPath id="cut-off-bottom">
         <rect x="0" y="0" width={this.state.circleMeasurements.cutoffWidth} height={this.state.circleMeasurements.cutoffHeight} />
       </clipPath>
-      <circle transform={this.state.transform} r={this.state.circleMeasurements.circleRadius} cx={this.state.circleMeasurements.circleX} cy={this.state.circleMeasurements.circleY} clipPath="url(#cut-off-bottom)" />
+      <circle style={this.state.circleStyle} transform={this.state.transform} r={this.state.circleMeasurements.circleRadius} cx={this.state.circleMeasurements.circleX} cy={this.state.circleMeasurements.circleY} clipPath="url(#cut-off-bottom)" />
+      <g style={axisFontStyle}>
+        <text transform={`translate(${this.state.lineWidth}, 310)`}>0</text>
+        <text transform={`translate(${this.state.size + this.state.lineWidth}, 310)`}>200</text>
+      </g>
     </g>
     );
   }
