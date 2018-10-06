@@ -15,7 +15,7 @@ Entry point of the app is `src/app.js`.
 
 ### Design
 
-Sketches of the design process can be seen on the `sketches.png` file. Different approaches to a gauge chart have been drawn up before starting to code.
+Sketches of the design process can be seen on the `sketches.jpg` file. Different approaches to a gauge chart have been drawn up before starting to code.
 
 ### Current State
 
