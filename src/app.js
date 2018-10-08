@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Gauge from './gauge.component';
+import Gauge from './components/gauge.component';
 
 const data = require('./data.json');
 

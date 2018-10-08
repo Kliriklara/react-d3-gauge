@@ -1,5 +1,5 @@
 import React from 'react';
-import Gauge from '../src/gauge.component';
+import Gauge from '../src/components/gauge.component';
 import { shallow } from './enzyme';
 
 describe('<Gauge />', () => {

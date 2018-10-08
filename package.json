@@ -1,6 +1,6 @@
 {
   "name": "react-d3-gauge",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Gauge Visualisation built with Webpack and React",
   "main": "src/app.js",
   "scripts": {
